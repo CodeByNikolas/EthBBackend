@@ -73,6 +73,8 @@ Update the values of the env variables in these new .env files (In this case esp
 In a terminal, deploy your test contracts on sepolia using:
 
 ```bash
+cd packages/hardhat
+yarn install
 yarn deploy --network sepolia
 ```
 
