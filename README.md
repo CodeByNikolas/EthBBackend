@@ -50,7 +50,7 @@ cp packages/nextjs/.env.example packages/nextjs/.env.local
 
 Update the values of the env variables in these new .env files (In this case especially the hardhat .env file)
 
-5. **Deploy Contracts**
+4. **Deploy Contracts**
 
 In a terminal, deploy your test contracts on sepolia using:
 
@@ -60,9 +60,9 @@ yarn deploy --network sepolia
 
 Find the contract in `packages/hardhat/contracts`. This script deploys your contract to Sepolia, with customization available in `packages/hardhat/deploy`.
 
-7. **Compute Results**
+5. **Compute Results**
 
--   In a fourth terminal, clone the maci repo - `git clone git@github.com:privacy-scaling-explorations/maci.git` and then reset to `ee3e2a6` commit using `git reset --hard ee3e2a6`
+-   In a terminal, clone the maci repo - `git clone git@github.com:privacy-scaling-explorations/maci.git` and then reset to `ee3e2a6` commit using `git reset --hard ee3e2a6` (I also dont know why sorry)
 -   Copy the zkeys generated from the maci wrapper repo to the cli directory of the maci repo using `cp -r maci-wrapper/packages/hardhat/zkeys maci/cli`.
 -   Install the dependencies using `pnpm i` and build the maci project using `pnpm run build`
 -   Copy the new contract addresses from the maci wrapper repo to the maci repo using `cp -r maci-wrapper/packages/contractAddresses.json maci/cli/build/contractAddresses.json`.
