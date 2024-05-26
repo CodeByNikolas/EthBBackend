@@ -3,6 +3,12 @@ This Project is a Fork off of https://github.com/yashgo0018/maci-wrapper
 
 # PriMaci Backend Voting Template
 
+# My Loom Video
+
+Check out this Loom video:
+
+<iframe src="https://www.loom.com/embed/5aeaf97053f9424bae69a52307cddafd" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 Welcome to the PriMaci Backend Voting Template!
 
 ## Features
