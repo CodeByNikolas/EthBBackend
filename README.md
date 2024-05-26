@@ -1,22 +1,21 @@
-# Scaffold ETH 2 + MACI Voting Template
+This Project is a Fork off of https://github.com/yashgo0018/maci-wrapper
+(even though it is not shown in the top of the repository)
 
-Welcome to the Scaffold ETH 2 + MACI Voting Template! This template is a powerful starting point for developers aiming to build decentralized voting applications that prioritize privacy and resist collusion. Combining the rapid development environment of Scaffold ETH with the innovative Minimal Anti-Collusion Infrastructure (MACI), this template offers a robust foundation for creating secure and transparent voting systems on the Ethereum blockchain.
+# PriMaci Backend Voting Template
+
+Welcome to the PriMaci Backend Voting Template!
 
 ## Features
 
-- **Voter Registration**: Secure registration process through the MACI contract, enabling eligible voting.
-- **Poll Management**: Admins can easily create and manage polls, including question and options setup.
-- **Secure Voting**: Leverage MACI's privacy-preserving technology to ensure votes are cast anonymously and securely.
-- **Results Display**: Transparent display of poll results after the voting phase concludes.
-- **Admin Dashboard**: Comprehensive admin interface for poll oversight, including current status and results analytics.
+-   **Deployment of Contracts on Sepolia**: Easy Deployment of the Smart contracts on Sepolia using Hardhat
 
 ## Requirements
 
 Ensure you have the following tools installed before you proceed:
 
-- [Node (>= v18.17)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
-- [Git](https://git-scm.com/downloads)
+-   [Node (>= v18.17)](https://nodejs.org/en/download/)
+-   Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
+-   [Git](https://git-scm.com/downloads)
 
 ## Quickstart
 
@@ -25,8 +24,8 @@ Jumpstart your development with these simple steps:
 1. **Clone and Set Up the Project**
 
 ```bash
-git clone https://github.com/scaffold-eth/scaffold-eth-2.git
-cd scaffold-eth-2
+git clone https://github.com/CodeByNikolas/EthBBackend
+cd EthBBackend
 yarn install
 ```
 
@@ -38,6 +37,8 @@ In your first terminal window, run:
 yarn download-zkeys
 ```
 
+These Files are quite big so it will take a short while. These files are also the reason why we split up our Repo into Back- and Frontend because I was not able to include those big files in a working vercel Deployment
+
 3. **Update the environment variables**
 
 Copy the env example files to env files
@@ -47,46 +48,29 @@ cp packages/hardhat/.env.example packages/hardhat/.env
 cp packages/nextjs/.env.example packages/nextjs/.env.local
 ```
 
-Update the values of the env variables in these new .env files
-
-4. **Start a Local Ethereum Network**
-
-In your first terminal window, run:
-
-```bash
-yarn chain
-```
-
-This initiates a local Ethereum network via Hardhat for development and testing purposes. Adjust the network settings in `hardhat.config.ts` as needed.
+Update the values of the env variables in these new .env files (In this case especially the hardhat .env file)
 
 5. **Deploy Contracts**
 
-In a second terminal, deploy your test contract with:
+In a terminal, deploy your test contracts on sepolia using:
 
 ```bash
-yarn deploy
+yarn deploy --network sepolia
 ```
 
-Find the contract in `packages/hardhat/contracts`. This script deploys your contract to the local network, with customization available in `packages/hardhat/deploy`.
-
-6. **Launch the NextJS Application**
-
-In a third terminal, start the NextJS frontend:
-
-```bash
-yarn start
-```
+Find the contract in `packages/hardhat/contracts`. This script deploys your contract to Sepolia, with customization available in `packages/hardhat/deploy`.
 
 7. **Compute Results**
 
-- In a fourth terminal, clone the maci repo - `git clone git@github.com:privacy-scaling-explorations/maci.git` and then reset to `ee3e2a6` commit using `git reset --hard ee3e2a6` 
-- Copy the zkeys generated from the maci wrapper repo to the cli directory of the maci repo using `cp -r maci-wrapper/packages/hardhat/zkeys maci/cli`. 
-- Install the dependencies using `pnpm i` and build the maci project using `pnpm run build`
-- Copy the new contract addresses from the maci wrapper repo to the maci repo using `cp -r maci-wrapper/packages/contractAddresses.json maci/cli/build/contractAddresses.json`. 
-- After this you should be able to run the commands written in the [maci documentation](https://maci.pse.dev/docs/v1.2/cli).
-- First merge signups, then merge messages, and then generate proof, and upload the tally.json file which is generated in the process to the admin panel after the poll is over.
+-   In a fourth terminal, clone the maci repo - `git clone git@github.com:privacy-scaling-explorations/maci.git` and then reset to `ee3e2a6` commit using `git reset --hard ee3e2a6`
+-   Copy the zkeys generated from the maci wrapper repo to the cli directory of the maci repo using `cp -r maci-wrapper/packages/hardhat/zkeys maci/cli`.
+-   Install the dependencies using `pnpm i` and build the maci project using `pnpm run build`
+-   Copy the new contract addresses from the maci wrapper repo to the maci repo using `cp -r maci-wrapper/packages/contractAddresses.json maci/cli/build/contractAddresses.json`.
+-   After this you should be able to run the commands written in the [maci documentation](https://maci.pse.dev/docs/v1.2/cli).
+-   First merge signups, then merge messages, and then generate proof, and upload the tally.json file which is generated in the process to the admin panel after the poll is over.
 
-Navigate to `http://localhost:3000` to interact with your dApp. Modify your app configuration in `packages/nextjs/scaffold.config.ts` and `packages/hardhat/constants.ts` as necessary.
+Navigate to `http://localhost:3000` (In your Frontend that you cloned from https://github.com/CodeByNikolas/ETHBFrontEnd/) to interact with your dApp. Modify your app configuration in `packages/nextjs/contracts.config.ts` and `packages/hardhat/constants.ts` as necessary.
+And also in `packages/nextjs/deployedContracts.ts` as also in `packages/hardhat/deployments/` (Copy them over from the Backend)
 
 The deployed contracts will be saved to the file `packages/hardhat/contractAddresses.json`, this file is compatible with maci cli.
 
@@ -96,11 +80,8 @@ The coordinator keys will be stored in the file `packages/hardhat/coordinatorKey
 
 After setting up the project, you can:
 
-- **Register**: Use the app's interface to register with the MACI contract and gain voting rights.
-- **Create Polls**: As an admin, you can create polls with custom questions and options.
-- **Vote**: Registered voters can participate in polls, utilizing MACI's secure voting mechanism.
-- **View Results**: Access poll outcomes after the voting phase ends.
-- **Admin Dashboard**: Monitor and manage ongoing polls, including viewing detailed poll status.
+-   **Launch**: Launch the Contracts to Sepolia, to use them in your Frontend
+-   **Compute**: Compute valid proofs using the Maki library and the Maki repository
 
 ## Contributing
 
