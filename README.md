@@ -3,15 +3,6 @@ This Project is a Fork off of https://github.com/yashgo0018/maci-wrapper
 
 # PriMaci Backend Voting Template
 
-# My Loom Video
-
-Check out this Loom video:
-
-wok?
-[![YouTube](http://i.ytimg.com/vi/kwgFkO-WvlQ/hqdefault.jpg)](https://www.youtube.com/watch?v=kwgFkO-WvlQ)
-
-Welcome to the PriMaci Backend Voting Template!
-
 ## Features
 
 -   **Deployment of Contracts on Sepolia**: Easy Deployment of the Smart contracts on Sepolia using Hardhat
