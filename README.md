@@ -11,6 +11,8 @@ Welcome to the PriMaci Backend Voting Template!
 
 ## Deployed Contracts
 
+Contracts are Deployed on the Sepolia Testnet.
+
 ConstantInitialVoiceCreditProxy: "0x332ea6D019e40fe440c36efA31Ffa26aB95e6449"<br>
 FreeForAllGatekeeper: "0x9fE23118a2e1fd77B12C7c3Ea8276DE782bFAcc9"<br>
 MACIWrapper: "0x0228795053F899a28f29c8acEce7f813BCFe9F3C"<br>
