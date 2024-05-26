@@ -70,11 +70,14 @@ Update the values of the env variables in these new .env files (In this case esp
 
 4. **Deploy Contracts**
 
+First delete the deployment folder to delete the existing contracts
+
 In a terminal, deploy your test contracts on sepolia using:
 
 ```bash
 cd packages/hardhat
 yarn install
+yarn download-zkeys
 yarn deploy --network sepolia
 ```
 
