@@ -3,9 +3,40 @@ This Project is a Fork off of https://github.com/yashgo0018/maci-wrapper
 
 # PriMaci Backend Voting Template
 
+Welcome to the PriMaci Backend Voting Template!
+
 ## Features
 
 -   **Deployment of Contracts on Sepolia**: Easy Deployment of the Smart contracts on Sepolia using Hardhat
+
+## Deployed Contracts
+
+ConstantInitialVoiceCreditProxy:
+address: "0x332ea6D019e40fe440c36efA31Ffa26aB95e6449"
+FreeForAllGatekeeper:
+address: "0x9fE23118a2e1fd77B12C7c3Ea8276DE782bFAcc9"
+MACIWrapper:
+address: "0x0228795053F899a28f29c8acEce7f813BCFe9F3C"
+MessageProcessorFactory:
+address: "0xE31b7c3E58b5D678FF5F6e6d5e5f42f255a570f3"
+PollFactory:
+address: "0xa6a222Aa2b0BA74Ecc1155c6eeeE7CBaF79DA67a"
+PoseidonT3:
+address: "0xbE7CE64159F3848d24c280c88C2E88D2BDaD6B59"
+PoseidonT4:
+address: "0xA439784b59d3239d0914232391397B674eA1303C"
+PoseidonT5:
+address: "0x182872214D06528B03910569c74EeB6740D52940"
+PoseidonT6:
+address: "0x8f34FfF7E14Aed8B0Df84Ac340EBc5661ECfaEbF"
+TallyFactory:
+address: "0x7D493033383A7433BAfDBfE2E3bbF59eBD36F090"
+TopupCredit:
+address: "0x43451A452d265a82F181742A7621EB91dA165adC"
+Verifier:
+address: "0xbB311c742c03D75db24a2a7Eb59D500431b423e2"
+VkRegistry:
+address: "0x280F716a21FfcFAF55038787ceF3f4361A73B57d"
 
 ## Requirements
 
